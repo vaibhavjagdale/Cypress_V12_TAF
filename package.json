@@ -1,0 +1,26 @@
+{
+  "name": "e2e-test",
+  "version": "1.0.0",
+  "description": "E2E tests for Tools QA App",
+  "main": "index.js",
+  "scripts": {
+    "formatAllCode": "npx prettier --write .",
+    "cy:open": "cypress open --browser chrome",
+    "cy:run": "cypress run --spec **/*.spec.js --browser chrome",
+    "eslint": "eslint .eslintrc.json"
+  },
+  "keywords": [
+    "cypress",
+    "test automation",
+    "integration",
+    "javascript"
+  ],
+  "author": "Vaibhav Jagdale",
+  "devDependencies": {
+    "cypress": "^12.17.1"
+  },
+  "dependencies": {
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0"
+  }
+}
