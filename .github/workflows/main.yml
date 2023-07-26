@@ -1,0 +1,19 @@
+name: Automation Tests.
+
+# configure manual trigger, push event and pull_request event 
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]  
+jobs:
+  UAT-Smoke-Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Smoke Tests
+        run: |
+          npm install
+          npm run cy:run
